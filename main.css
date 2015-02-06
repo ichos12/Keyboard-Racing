@@ -1,0 +1,17 @@
+.text_window
+{
+    width: 50%;
+    height: 150px;
+    border-radius: 15px;
+    background-color: #ececec;
+    position: absolute;
+    margin: 10px 25%;
+    padding: 10px;
+}
+
+.input
+{
+    width: 45%;
+    position: absolute;
+    margin: 100px 30%;
+}
