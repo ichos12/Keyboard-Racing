@@ -7,12 +7,11 @@
 </head>
 <body>
     <div class="text_window" id="text_window">
-        Sample text
+        <span id="text"> Sample text </span>
         <form>
-            <input type="text" placeholder="Type here.." class="input" id="input" onkeydown="ifSpace(event)"/><b></b>
+            <input type="text" placeholder="Type here.." class="input" id="input" onkeydown="ifSpace(event)" onfocus="compare(event)"/>
         </form>
     </div>
     <script src="main.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 </body>
 </html>

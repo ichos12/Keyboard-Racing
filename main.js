@@ -24,10 +24,22 @@ function getChar(event)
     return null;
 }
 
+input = document.getElementById('input');
+
 function ifSpace(event)
 {
     if (event.keyCode == 32)
     {
-        document.getElementById('input').value = '';
+        input.value = '';
+    }
+}
+
+text = document.getElementById('text');
+
+function compare(event)
+{
+    if (event.char != text.char)
+    {
+        input.onkeypress = 'return false';
     }
 }
