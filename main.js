@@ -36,10 +36,22 @@ function ifSpace(event)
 
 text = document.getElementById('text');
 
+var word = text.split(' ');
+
+window.onload = word[current].css.textUnderline;
+
 function compare(event)
 {
-    if (event.char != text.char)
+    if (input.value + getChar(event) != word[1])
     {
-        input.onkeypress = 'return false';
+        var onKeyPress = function()
+        {
+            return false;
+        };
+        input.onkeypress = onKeyPress;
+        onKeyPress();
+    } else
+    {
+        word = word[previous + 1];
     }
 }
