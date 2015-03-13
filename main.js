@@ -26,23 +26,30 @@ function getChar(event)
 
 input = document.getElementById('input');
 
+var text = document.getElementById('text').innerHTML + '';
+var word = text.split(' ');
+
 function ifSpace(event)
 {
     if (event.keyCode == 32)
     {
         input.value = '';
+        //word[i].style.textDecoration = "underline";
     }
 }
-
-text = document.getElementById('text');
-
-var word = text.split(' ');
-
-window.onload = word[current].css.textUnderline;
-
+var i=0;
+function changeWord(i)
+{
+    for (i; i<word.length; i++) 
+    {
+        word[i];
+    }
+};
+console.log(word[i]);
 function compare(event)
 {
-    if (input.value + getChar(event) != word[1])
+    var newWord = input.value + getChar(event);
+    if (newWord != word[i])
     {
         var onKeyPress = function()
         {
@@ -50,8 +57,9 @@ function compare(event)
         };
         input.onkeypress = onKeyPress;
         onKeyPress();
-    } else
+    } 
+    else
     {
-        word = word[previous + 1];
+        changeWord();
     }
 }
