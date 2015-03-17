@@ -29,34 +29,27 @@ input = document.getElementById('input');
 var text = document.getElementById('text').innerHTML + '';
 var word = text.split(' ');
 
-function ifSpace(event)
+var i=0;
+function changeWord(i)
+{
+    for (i; i<word.length; i++) 
+    {
+        i++;
+    }
+};
+
+function onKeyDownHandler(event)
 {
     if (event.keyCode == 32)
     {
         input.value = '';
         //word[i].style.textDecoration = "underline";
     }
-}
-var i=0;
-function changeWord(i)
-{
-    for (i; i<word.length; i++) 
-    {
-        word[i];
-    }
-};
-console.log(word[i]);
-function compare(event)
-{
+
     var newWord = input.value + getChar(event);
     if (newWord != word[i])
     {
-        var onKeyPress = function()
-        {
-            return false;
-        };
-        input.onkeypress = onKeyPress;
-        onKeyPress();
+        event.preventDefault();
     } 
     else
     {
